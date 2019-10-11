@@ -26,10 +26,11 @@ body{
 <style>
 ul {
 list-style-type: none;
-  margin: 20px;
+  margin: 8px;
   padding: 25px;
-  overflow: hidden;
+  min-width: 160px;
   background-color: #FAA46B;
+  text-align: center;
 }
 
 li {
@@ -78,4 +79,6 @@ li.dropdown {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
+
 </style>
