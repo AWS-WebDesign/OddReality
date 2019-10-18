@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<style media="screen">
+.style {
+  margin: 25px;
+  padding: 20px;
+  background-color: black;
+  color: white;
+}
+</style>
+
+<html lang="en" dir="ltr">
+<head>
+<title>form practice</title>
+</head>
+<center> <h1> choose a show to watch </h1> </center>
+
+<form class="style" action="formresult.html" method="post">
+<label for="user">NAME :</label>
+<input type="text" name="username" id="user">
+<br>
+<br>
+<span>CHOOSE A SHOW</span>
+<br>
+<label for="show" id="tbbt">THE BIGBANG THEORY</label>
+<input type="radio" name="tbbt" value="tbbt" id="tbbt">
+<label for="show" id="mf">MODERN FAMILY</label>
+<input type="radio" name="tbbt" value="" id="mf">
+<label for="show" id="tgp">THE GOOD PLACE</label>
+<input type="radio" name="tbbt" value="" id="tgp">
+<br>
+<label for="location">Pick a website to watch: </label>
+      <select name="select" id="location">
+        <option name="option1">Netflix</option>
+        <option name="option2">Hulu</option>
+      </select>
+      <br>
+      <input type="submit" value="Submit">
+</form>
+</html>
