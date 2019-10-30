@@ -22,4 +22,25 @@
   <br>
   <br>
   <br>
+<form class="style"  method="post">
+  <label for="user">NAME :</label>
+  <input type="text" name="username" id="user">
+<input type="button" value="start!" onclick="showInput();" >
+</form>
+<div id="start">
+  <p><span id="Name"></span> is ready to start your quiz! Please scroll down to continue!</p>
+  <a href="questions.html"><img src="noname.png" alt="button" align=left width=500></a>
+</div>
+
+<script language="JavaScript">
+  function showInput() {
+    document.getElementById("Name").innerHTML=
+    document.getElementById("user").value;
+
+    var r = document.getElementById("start");
+    r.style.display = "block";
+    }
+
+</script>
+
 </body>
