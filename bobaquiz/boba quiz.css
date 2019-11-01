@@ -101,11 +101,11 @@ form {
   font-size: 25px;
 }
 
-.cuisine {
+.CUISINE {
   margin: 25px;
   padding: 20px;
+  text-align: left;
   background-color: black;
-  color: #FFC48F;
-  align-items: left;
+    color: #FCC48F;
 }
 #personality
