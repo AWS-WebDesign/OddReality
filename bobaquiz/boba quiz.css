@@ -100,3 +100,12 @@ form {
 #big {
   font-size: 25px;
 }
+
+.cuisine {
+  margin: 25px;
+  padding: 20px;
+  background-color: black;
+  color: #FFC48F;
+  align-items: left;
+}
+#personality

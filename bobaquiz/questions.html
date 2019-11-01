@@ -10,18 +10,19 @@
 <body>
 <br>
 <h1>WELCOME TO THE QUIZ!</h1>
+<!--anchors for the dropdown-->
   <ul>
     <li><a href="boba quiz.html">HOME</a></li>
     <li><a href="citationsboba.html">CITATIONS</li>
     <li class="dropdown">
       <a href="javascript:void(0)" class="dropbtn">MORE ABOUT THE RESULTS</a>
       <div class="dropdown-content">
-        <a href="author.html">about the author</a>
         <a href="resultsquiz.html">result analysis</a>
   </ul>
   <br>
   <br>
   <br>
+  <!--question 1 for cup-->
 <form class="style"  method="post">
 <label for="cups" id=big>CHOOSE A CUP SIZE! (ONLY CHOOSE ONE)</label>
 <br>
@@ -45,7 +46,7 @@
 <br>
 <br>
 </form>
-
+  <!--question 2 for sweetness-->
 <form class="style"  method="post">
 <label for="sweetness" id=big>CHOOSE SWEETNESS! (ONLY CHOOSE ONE)</label>
 <br>
@@ -69,19 +70,19 @@
 <br>
 <br>
 </form>
-
+  <!--question 3 for ice level-->
 <form class="style"  method="post">
-<label for="ice level" id=big>CHOOSE SWEETNESS! (ONLY CHOOSE ONE)</label>
+<label for="ice level" id=big>CHOOSE ICE LEVEL! (ONLY CHOOSE ONE)</label>
 <br>
-<p><img src="tea.jpeg" align=right width="200" height="210"></p>
-<label for="100%">100%</label>
-<input id="100%"type="checkbox" name="100%">
+<p><img src="ice.jpg" align=right width="200" height="210"></p>
+<label for="FULL ICE">FULL ICE</label>
+<input id="FULL ICE"type="checkbox" name="FULL ICE">
 <br>
-<label for="50%">50%</label>
-<input id="50%"type="checkbox" name="50%">
+<label for="HALF ICE">HALF ICE</label>
+<input id="HALF ICE"type="checkbox" name="HALF ICE">
 <br>
-<label for="none">none</label>
-<input id="none"type="checkbox" name="none">
+<label for="NO ICE">NO ICE</label>
+<input id="NO ICE"type="checkbox" name="NO ICE">
 <br>
 <br>
 <br>
@@ -93,4 +94,143 @@
 <br>
 <br>
 </form>
+  <!--question 4 for boba-->
+<form class="style"  method="post">
+<label for="boba" id=big>CHOOSE kinds of BOBA! (ONLY CHOOSE ONE)</label>
+<br>
+<p><img src="boba.jpg" align=right width="200" height="210"></p>
+<label for="ORIGINAL">ORIGINAL</label>
+<input id="ORIGINAL"type="checkbox" name="ORIGINAL">
+<br>
+<label for="COLORED">COLORED (fruit)</label>
+<input id="COLORED"type="checkbox" name="COLORED">
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</form>
+  <!--question 5 for extra topping-->
+<form class="style"  method="post">
+<label for="topping" id=big>CHOOSE OTHER KINDS OF TOPPINGS (ONLY CHOOSE ONE)</label>
+<br>
+<p><img src="jelly.png" align=right width="200" height="210"></p>
+<label for="topping1">ALOE VERA</label>
+<input id="topping1"type="checkbox" name="topping1">
+<br>
+<label for="topping2">COCONUT JELLY</label>
+<input id="topping2"type="checkbox" name="topping2">
+<br>
+<label for="topping3">NONE</label>
+<input id="topping3" type="checkbox" name="topping3">
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</form>
+
+  <!--submit button for the results to show-->
+<form class="style" action="index.html" method="post">
+<input type="button" value="TELL ME MY PERSONALITY! (PRESS and SCROLL)" onclick="showInput();" >
+</form>
+<br>
+  <!--div for the results to show-->
+<div id="start">
+  <p><span id="personality"></span>! Check out other possible results under 'MORE ABOUT THE RESULTS'! </p>
+</div>
+
+<script language="JavaScript">
+    function showInput() {
+        var r = document.getElementById("start");
+        r.style.display = "block";
+
+        var total = 0;
+        if (document.getElementById("small cup").checked)
+        {
+          total = total + +10;
+        }
+        if (document.getElementById("medium cup").checked)
+        {
+          total = total + 50;
+        }
+        if (document.getElementById("large cup").checked)
+        {
+          total = total + 10;
+        }
+
+        if (document.getElementById("100%").checked)
+        {
+          total = total + 10;
+        }
+        if (document.getElementById("50%").checked)
+        {
+          total = total + 2;
+        }
+        if (document.getElementById("none").checked)
+        {
+          total = total + 2;
+        }
+        if (document.getElementById("FULL ICE").checked)
+        {
+          total = total + 20;
+        }
+        if (document.getElementById("HALF ICE").checked)
+        {
+          total = total + 3;
+        }
+       if (document.getElementById("NO ICE").checked)
+        {
+          total = total + 3;
+        }
+        if (document.getElementById("ORIGINAL").checked)
+        {
+          total = total + 2;
+        }
+        if (document.getElementById("COLORED").checked)
+        {
+          total = total + 30;
+        }
+        if (document.getElementById("topping1").checked)
+        {
+          total = total + 2;
+        }
+        if (document.getElementById("topping2").checked)
+        {
+          total = total + 20;
+        }
+        if (document.getElementById("topping3").checked)
+        {
+          total = total + 40;
+        }
+        if (20 > total > 0) {
+        document.getElementById("personality").innerHTML = "You should try Chinese! It comes with a tint of sweetness at the same time the right amount of savory. It also comes in many varieties! ";
+        }
+        if (30 > total > 20) {
+        document.getElementById("personality").innerHTML = "You should try Thai! It comes with some spicyness at the same time provides eye pleasing dishes. It fits better for those who have a stronger stomach. ";
+        }
+        if (40 > total > 30) {
+        document.getElementById("personality").innerHTML = "You should try American! It's the righy amount of food, also provides a more fulfilling taste. The food is not just stomach filling, but also visually pleasing!!";
+        }
+        if (50 > total > 40) {
+        document.getElementById("personality").innerHTML = "You should try Korean! Korean dishes comes in bigger sizes and also more taste bud stimulating!! Their dishes also have a lot of cute decorations. ";
+        }
+        if (total > 50) {
+        document.getElementById("personality").innerHTML = "You should try all kinds of food, with such a special taste, you're someone that has your own style and would be willing to try all kinds of different food. Step outside and let different cuisines amaze you!! ";
+        }
+      }
+        </script>
 </body>
