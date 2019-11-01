@@ -89,14 +89,14 @@ input [type=text]{
   background-color: black;
   color: #FCC48F;
   }
-
+/** css for the form **/
 form {
   background-color: black;
   color: #FCC48F;
   padding: 12px 20px;
   margin: 25px;
 }
-
+/** css for certain label style **/ A
 #big {
   font-size: 25px;
 }
