@@ -5,14 +5,14 @@
   padding: 0px;
   background-repeat: no-repeat;
   animation-name: firstcase;
-  animation-duration: 8s;
+  animation-duration: 12s;
   transition: 3s;
 }
 
 @keyframes firstcase {
   0% {background-image: url(2011.png); top: 0px; left: 0px; }
-  25% {background-image: url(sued.png);top: 0px; left: 0px; }
-  45% {background-image: url(tattoo.png);top: 0px; left: 0px;}
+  45% {background-image: url(sued.png);top: 0px; left: 0px; }
+  75% {background-image: url(tattoo.png);top: 0px; left: 0px;}
   100% {background-image: url(know.png);top: 0px; left: 0px;}
 h1 {
  align-self: left;
